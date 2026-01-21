@@ -1,0 +1,269 @@
+.mpesa-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+.mpesa-modal {
+  background: var(--white);
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.mpesa-modal-header {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+  color: var(--white);
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mpesa-modal-header h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.modal-close-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.modal-close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.mpesa-modal-content {
+  padding: 30px;
+}
+
+.mpesa-info {
+  background: var(--very-light-green);
+  border-left: 4px solid var(--primary-green);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.info-item.total {
+  border-top: 2px solid var(--gray-300);
+  padding-top: 12px;
+  margin-top: 12px;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.info-label {
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.info-value {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--gray-300);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.phone-input-wrapper:focus-within {
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.phone-prefix {
+  padding: 12px 15px;
+  background: var(--gray-100);
+  color: var(--text-dark);
+  font-weight: 600;
+  border-right: 2px solid var(--gray-300);
+  white-space: nowrap;
+}
+
+.phone-input-wrapper input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  font-size: 1rem;
+  background: transparent;
+  color: var(--text-dark);
+}
+
+.phone-input-wrapper input:focus {
+  outline: none;
+}
+
+.phone-input-wrapper input.error {
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+.form-group input::placeholder {
+  color: var(--gray-600);
+}
+
+.phone-helper {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 8px;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  display: block;
+}
+
+.mpesa-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 25px;
+  padding: 12px;
+  background: var(--very-light-green);
+  border-radius: 8px;
+}
+
+.mpesa-terms input[type="checkbox"] {
+  margin-top: 4px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-green);
+}
+
+.mpesa-terms label {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.modal-actions .btn {
+  flex: 1;
+}
+
+.btn-mpesa {
+  background-color: #00897b;
+  color: var(--white);
+}
+
+.btn-mpesa:hover:not(:disabled) {
+  background-color: #00695c;
+}
+
+.btn-mpesa:disabled {
+  background-color: #80cbc4;
+}
+
+.mpesa-footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--very-light-green);
+  border-radius: 10px;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.mpesa-footer p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.mpesa-footer p:first-child {
+  margin-top: 0;
+}
+
+.mpesa-footer p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .mpesa-modal {
+    width: 95%;
+    border-radius: 16px;
+  }
+
+  .mpesa-modal-content {
+    padding: 20px;
+  }
+
+  .mpesa-modal-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .mpesa-info {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .info-item {
+    font-size: 0.9rem;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-actions .btn {
+    width: 100%;
+  }
+}

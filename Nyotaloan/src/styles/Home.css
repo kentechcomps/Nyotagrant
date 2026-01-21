@@ -1,0 +1,228 @@
+.home {
+  flex: 1;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+  color: var(--white);
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin-top: 15px;
+}
+
+/* Form Section */
+.form-section {
+  padding: 80px 20px;
+  background-color: var(--very-light-green);
+}
+
+.form-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 50px;
+  max-width: 600px;
+  margin: 0 auto 60px;
+  box-shadow: var(--shadow);
+}
+
+.form-card h2 {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.form-description {
+  color: var(--text-light);
+  margin-bottom: 30px;
+  font-size: 1.05rem;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 14px;
+  border: 2px solid var(--gray-300);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: var(--white);
+  color: var(--text-dark);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: block;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.form-buttons .btn {
+  flex: 1;
+}
+
+/* M-Pesa CTA */
+.mpesa-cta {
+  margin-bottom: 80px;
+}
+
+.mpesa-badge {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: var(--shadow);
+  color: var(--text-dark);
+}
+
+.mpesa-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.mpesa-badge h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.mpesa-badge p {
+  margin-bottom: 20px;
+  color: #374151;
+  font-size: 1rem;
+}
+
+.mpesa-badge .btn {
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.2rem;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .form-section {
+    padding: 40px 20px;
+  }
+
+  .form-card {
+    padding: 30px 20px;
+    margin-bottom: 40px;
+  }
+
+  .form-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .mpesa-badge {
+    padding: 30px 20px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .form-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .form-card {
+    padding: 20px 15px;
+  }
+}
