@@ -84,7 +84,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content slide-in-up">
-          <h1 className="hero-title">Nyoma</h1>
+          <img src="/nyotalogo.png" alt="Nyota Logo" className="hero-logo" />
+          <h1 className="hero-title">Nyota</h1>
           <p className="hero-tagline">Instant loans. Simple. Secure. Reliable.</p>
           <p className="hero-subtitle">Apply in minutes and get processed instantly.</p>
         </div>
