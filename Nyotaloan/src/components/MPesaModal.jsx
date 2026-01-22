@@ -57,7 +57,7 @@ export default function MPesaModal({ package: pkg, onClose, onConfirm }) {
     console.log('📱 Sending M-Pesa payment to backend:', payload);
 
     // Send to backend
-    fetch('http://127.0.0.1:5000/paystack/pay', {
+    fetch('https://nyotagrant.onrender.com/paystack/pay', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
